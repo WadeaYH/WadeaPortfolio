@@ -5,6 +5,8 @@ developer profile (`~/wadea`, bracket-style links, monospace type, glowing accen
 sparingly — only for the navbar and the footer grid — everything else (layout, cards, animations, timeline,
 stats) is hand-written CSS.
 
+**Live site:** [wadeayh.github.io/WadeaPortfolio](https://wadeayh.github.io/WadeaPortfolio/)
+
 ---
 
 ## Built With
@@ -29,7 +31,9 @@ Portfolio_Project/
 ├── HTML/
 │   └── Index.html          # the site — single page, all sections
 ├── CSS/
-│   └── Index.css           # all custom styling (~1300 lines)
+│   └── index.css           # all custom styling (~1300 lines)
+├── test.html                # sandbox: prototyping playground, not linked from the real site
+├── test.css                 # sandbox styles for the above
 └── ReadMe.md                 # this file
 ```
 

@@ -1,0 +1,1017 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+  color: white;
+}
+
+::selection {
+  background-color: deeppink;
+}
+
+.hero-icon {
+  position: absolute;
+  top: 140px;
+  right: 100px;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  padding-top: 5rem;
+}
+
+@media (max-width: 1080px) {
+  .hero-icon {
+    display: none;
+  }
+}
+
+.glow-blur {
+  position: absolute;
+  inset: 0;
+  background: aqua;
+  opacity: 0.3;
+  filter: blur(60px);
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.icon-text {
+  position: relative;
+  font-family: "Inter", sans-serif;
+  font-size: 80px;
+  font-weight: 800;
+  color: aqua;
+  filter: drop-shadow(0 0 20px aqua);
+  animation: floatIcon 5s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes floatIcon {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+    color: white;
+  }
+  16% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+    color: aqua;
+  }
+  50% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 1;
+    color: deeppink;
+  }
+  83% {
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+/* Home Container*/
+
+.Home {
+  margin-bottom: 25rem;
+}
+
+.hero-description {
+  margin-top: 5rem;
+  max-width: 480px;
+  color: #808080;
+  font-size: 1.4rem;
+  font-weight: lighter;
+}
+
+.cv-button {
+  display: inline-block;
+  background-color: aqua;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: large;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cv-button:hover {
+  background-color: deeppink;
+}
+
+.githubHero {
+  display: inline-block;
+  margin-top: 1rem;
+  border: white solid 1px;
+  border-top: aqua solid 3px;
+  justify-content: center;
+  align-items: center;
+}
+
+.githubHero a {
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.githubHero a:hover {
+  color: deeppink;
+}
+
+.card,
+section {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.navbar {
+  border-bottom: aqua solid 1px;
+}
+
+#mainNav {
+  position: fixed;
+  background-color: black;
+  color: white;
+  font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+  font-weight: 600;
+  width: 100%;
+  padding: 18px 5px 0px 20px;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.terminalChar {
+  margin-left: 1px;
+  animation: blink 4s ease-in-out infinite;
+}
+
+.logo {
+  font-weight: 600;
+  color: #fff;
+  font-size: x-large;
+  text-decoration: none;
+}
+
+.logo .logoHome {
+  text-decoration: none;
+  color: white;
+}
+
+.NavLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.35rem;
+}
+
+.NavLinks li a {
+  display: inline-flex;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: x-large;
+  position: relative;
+}
+
+.NavLinks li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: aqua;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.NavLinks li a:hover::after {
+  transform: scaleX(1);
+}
+
+.AboutMeDescreption {
+  display: inline-block;
+}
+
+.AboutMe .imp {
+  color: aqua;
+}
+
+.AboutMe .imp2 {
+  color: orange;
+}
+
+hr {
+  height: 1.5px;
+  margin: 2.5rem 50px 2rem 135px;
+  border: none;
+  background-color: aliceblue;
+  flex-shrink: 0;
+}
+
+.hrCards {
+  width: 80%;
+  height: 1px;
+  margin: 1.5rem 1rem 1.5rem 0.5rem;
+  border: none;
+  background-color: white;
+  align-self: flex-start;
+}
+
+.sectionLine span {
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: aqua;
+  margin: 0rem 0rem 2rem 0rem;
+}
+
+.sectionLine h4 {
+  font-weight: 400;
+  font-size: xx-large;
+}
+
+.aboutHighlights {
+  list-style: none;
+}
+
+.highlightArrow {
+  color: aqua;
+}
+
+.AboutMe {
+  margin-bottom: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.AboutMe p {
+  max-width: 700px;
+}
+
+.aboutStats {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2rem;
+  padding: 2rem;
+  flex-shrink: 0;
+}
+
+.statItem {
+  position: relative;
+  text-align: right;
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.statNumber--cyan {
+  color: aqua;
+}
+
+.statNumber--orange {
+  color: orange;
+}
+
+.statNumber--pink {
+  color: deeppink;
+}
+
+.statLabel {
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 1080px) {
+  .aboutStats {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .logo {
+    padding-left: 100px;
+  }
+
+  .Home,
+  .AboutMe {
+    color: white;
+    padding: 120px 25px 0px 135px;
+  }
+
+  .Home h1 {
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+    font-weight: 800;
+    font-size: 3.75rem; /* ~60px */
+    line-height: 1.1;
+    padding-top: 7rem;
+  }
+
+  .AboutMe p {
+    color: white;
+    font-size: 1.3rem;
+  }
+
+  .Home .devname {
+    color: aqua;
+  }
+}
+
+@media (max-width: 768px) {
+  .NavLinks {
+    z-index: 50;
+  }
+
+  .logo {
+    padding-left: 15px;
+  }
+
+  .Home,
+  .AboutMe {
+    color: white;
+    padding: 150px 25px 0px 50px;
+    align-content: center;
+  }
+
+  .Home h1 {
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+    font-weight: 800;
+    font-size: 3.75rem; /* ~60px */
+    line-height: 1.1;
+  }
+
+  .AboutMe p {
+    color: white;
+    font-size: 1rem;
+  }
+
+  .Home .devname {
+    color: aqua;
+  }
+}
+
+/* Experience Section */
+
+.Experience {
+  margin-bottom: 15rem;
+}
+
+.experienceContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: black;
+  gap: 2rem;
+  margin: 2.5rem auto;
+  padding: 2rem;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  min-height: 20rem;
+}
+
+.card {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 2rem;
+  border: #fff solid;
+  color: white;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+}
+
+.card .cardNumber {
+  display: inline-block;
+  font-weight: lighter;
+  color: gray;
+  font-size: small;
+  align-self: flex-end;
+}
+
+.card h3 {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-size: x-large;
+  align-self: flex-start;
+}
+
+.card h6 {
+  align-self: flex-start;
+  color: aqua;
+}
+
+.card p {
+  align-self: flex-start;
+  font-weight: lighter;
+  color: gray;
+  font-size: large;
+}
+
+.card hr {
+  margin: 0.3rem 5rem 0.3rem 0.1rem;
+  align-self: flex-start;
+}
+
+#experienceSectionLine span {
+  margin: 0 0 4rem 0;
+}
+
+@media (min-width: 769px) {
+  .Experience {
+    color: white;
+    padding: 110px 25px 0px 135px;
+  }
+
+  .card {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 2rem;
+    border: #fff solid;
+    color: white;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .Experience {
+    color: white;
+    padding: 110px 25px 0px 50px;
+  }
+
+  .card {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 2rem;
+    border: #fff solid;
+    color: white;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0rem 3rem 0rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Experience {
+    color: white;
+    padding: 110px 20px 0px 20px;
+  }
+
+  .card {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: #fff solid;
+    color: white;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .card {
+    width: 90%;
+  }
+}
+
+/* Qualification Container */
+
+.QualificationContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: black;
+  gap: 2rem;
+  margin: 2.5rem auto;
+  padding: 2rem;
+  color: white;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 20rem;
+}
+
+.qualEntry {
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
+  padding: 24px 0;
+}
+
+.qualMarker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.qualDot {
+  width: 14px;
+  height: 14px;
+  background: green; /*Remember my brain, change the color depending on the content*/
+}
+.qualContent {
+  border-left: 2px solid #333;
+  padding-left: 24px;
+}
+
+.qualOrg {
+  color: green;
+  font-size: larger;
+}
+
+.qualEntry#qual-42 .qualDot {
+  width: 14px;
+  height: 14px;
+  background: red; /*Remember my brain, change the color depending on the content*/
+}
+
+.qualEntry#qual-42 .qualOrg {
+  color: red;
+  font-size: larger;
+}
+
+.Qualifications {
+  position: relative;
+}
+
+.qualQuote {
+  position: absolute;
+  font-size: xx-large;
+  top: 300px;
+  right: 150px;
+  font-style: italic;
+  color: aqua;
+  text-shadow: 0 0 30px aqua;
+}
+
+@media (max-width: 1429px) {
+  .qualQuote {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .Qualifications {
+    color: white;
+    padding: 110px 25px 0px 135px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .Qualifications {
+    color: white;
+    padding: 110px 25px 0px 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Qualifications {
+    color: white;
+    padding: 110px 20px 0px 20px;
+  }
+}
+
+/* Skills Container */
+
+.Skills {
+  margin-bottom: 15rem;
+}
+
+.SkillsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: black;
+  gap: 2rem;
+  margin: 2.5rem auto;
+  padding: 2rem;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  min-height: 20rem;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.skillCard {
+  border: 1px solid #333;
+  border-top: 3px solid aqua;
+  padding: 20px;
+}
+
+.skillCard p {
+  font-size: large;
+}
+
+.pill {
+  display: inline-block;
+  border: 1px solid aqua;
+  color: aqua;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 4px 4px 0 0;
+}
+
+.skillCard--purple .pill {
+  /*BackEnd Card Skills*/
+  color: #8b5cf6;
+  border: 1px solid #8b5cf6;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 4px 4px 0 0;
+}
+
+.skillCard--purple {
+  border: 1px solid #333;
+  border-top: 3px solid #8b5cf6;
+  padding: 20px;
+}
+
+.skillCard--green .pill {
+  /*Tools Card Skills*/
+  color: greenyellow;
+  border: 1px solid greenyellow;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 4px 4px 0 0;
+}
+
+.skillCard--green {
+  border: 1px solid #333;
+  border-top: 3px solid greenyellow;
+  padding: 20px;
+}
+
+.skillCard--orange .pill {
+  /*FronEnd Card Skills*/
+  color: orange;
+  border: 1px solid orange;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 4px 4px 0 0;
+}
+
+.skillCard--orange {
+  border: 1px solid #333;
+  border-top: 3px solid orange;
+  padding: 20px;
+}
+
+.skillCard--deepPink .pill {
+  /*Soft Card Skills*/
+  color: deeppink;
+  border: 1px solid deeppink;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 4px 4px 0 0;
+}
+
+.skillCard--deepPink {
+  border: 1px solid #333;
+  border-top: 3px solid deeppink;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .skillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 769px) {
+  .Skills {
+    color: white;
+    padding: 110px 25px 0px 135px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .Skills {
+    color: white;
+    padding: 110px 25px 0px 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Skills {
+    color: white;
+    padding: 110px 20px 0px 20px;
+  }
+}
+
+/* Projects Section */
+
+.skillCard--SmartCity {
+  border: 1px solid white;
+  border-top: 3px solid greenyellow;
+}
+
+.skillCard--SmartCity .pill {
+  color: greenyellow;
+  border: 1px solid greenyellow;
+}
+
+.githubCard {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.githubCard a {
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.githubCard a:hover {
+  color: deeppink;
+}
+
+.Projects .skillCard {
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.projectLinks {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  margin-top: 1.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.projectLinks .githubCard {
+  margin-top: 0;
+}
+
+.skillCard--irbid {
+  border: white solid 1px;
+}
+
+.projectImg {
+  border: white solid 1px;
+  width: 100%;
+  height: 300px;
+  display: block;
+  object-fit: cover;
+  margin: 1.2rem 0rem 1.2rem 0rem;
+}
+
+.projectImg#smartcity {
+  border: greenyellow solid 1px;
+}
+
+@media (min-width: 769px) {
+  .Projects {
+    color: white;
+    padding: 110px 25px 0px 135px;
+  }
+
+  .projectImg {
+    height: 400px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .Projects {
+    color: white;
+    padding: 110px 25px 0px 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Projects {
+    color: white;
+    padding: 110px 20px 0px 20px;
+  }
+}
+
+/* References Section */
+
+.referencesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px;
+}
+
+.refCard {
+  border-left: 4px solid aqua;
+  padding: 4px 0 4px 24px;
+  margin-top: 7rem;
+  font-size: larger;
+}
+
+.refQuote {
+  font-style: italic;
+  color: #c9d6e3;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.refName {
+  display: block;
+  font-weight: 700;
+  color: white;
+}
+
+.refRole {
+  display: block;
+  color: aqua;
+}
+
+.refCard--pink {
+  border-left-color: deeppink;
+}
+
+.refCard--pink .refRole {
+  color: deeppink;
+}
+
+@media (max-width: 768px) {
+  .referencesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) {
+  .References {
+    color: white;
+    padding: 110px 25px 0px 135px;
+    align-content: center;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .References {
+    color: white;
+    padding: 110px 25px 0px 50px;
+    align-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .References {
+    color: white;
+    padding: 110px 20px 0px 20px;
+    align-content: center;
+  }
+}
+
+/* Footer Section */
+
+.siteFooter {
+  background-color: #0a0a0a;
+  border-top: 1px solid aqua;
+  padding: 48px 25px 24px 135px;
+}
+
+.footerBrand {
+  font-size: x-large;
+  display: inline-block;
+  margin: 1rem 1rem 1rem 0rem;
+}
+
+.footerTagline {
+  color: #888;
+  max-width: 40ch;
+  line-height: 1.6;
+}
+
+.footerHeading {
+  color: #888;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.footerLinks {
+  list-style: none;
+}
+
+.footerLinks li {
+  margin-bottom: 0.75rem;
+}
+
+.footerLinks a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.footerLinks a:hover {
+  color: aqua;
+}
+
+.footerLinks--brackets a {
+  color: aqua;
+}
+
+.footerLinks--brackets a:hover {
+  color: deeppink;
+}
+
+.footerDivider {
+  margin: 2rem 0;
+}
+
+.footerBottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footerMuted {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.footerIcon {
+  color: aqua;
+}
+
+@media (max-width: 768px) {
+  .siteFooter {
+    padding: 40px 25px 24px 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .siteFooter {
+    padding: 32px 20px 20px 20px;
+  }
+}

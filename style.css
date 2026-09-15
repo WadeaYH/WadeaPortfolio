@@ -890,6 +890,14 @@ hr {
   font-size: larger;
 }
 
+.refCard#batool{
+ border-left: deeppink solid 4px;
+}
+
+.refCard#mohammad{
+  border-left: orange solid 4px;
+}
+
 .refQuote {
   font-style: italic;
   color: #c9d6e3;

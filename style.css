@@ -338,6 +338,10 @@ hr {
   margin-top: 0.25rem;
 }
 
+.logo#footerlogo {
+  padding-left: 0px;
+}
+
 @media (max-width: 1080px) {
   .aboutStats {
     display: none;
@@ -586,6 +590,17 @@ hr {
 
 .qualEntry#qual-42 .qualOrg {
   color: red;
+  font-size: larger;
+}
+
+.qualEntry#qual-orange .qualDot {
+  width: 14px;
+  height: 14px;
+  background: orange; /*Remember my brain, change the color depending on the content*/
+}
+
+.qualEntry#qual-orange .qualOrg {
+  color: orange;
   font-size: larger;
 }
 
@@ -901,6 +916,11 @@ hr {
   color: deeppink;
 }
 
+.refLinks{
+  display: block;
+  margin-top: 2rem;
+}
+
 @media (max-width: 768px) {
   .referencesGrid {
     grid-template-columns: 1fr;
@@ -960,6 +980,7 @@ hr {
 
 .footerLinks {
   list-style: none;
+  padding-left: 0rem;
 }
 
 .footerLinks li {

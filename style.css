@@ -222,8 +222,7 @@ body {
 .iconTooltip {
   position: absolute;
   bottom: 130%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0%;
   background: aqua;
   color: black;
   font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
@@ -236,7 +235,6 @@ body {
   visibility: hidden;
   transition: opacity 0.3s ease;
   animation: floatIcon 2s ease-in-out infinite;
-
 }
 
 .iconLink{

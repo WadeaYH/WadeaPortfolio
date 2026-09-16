@@ -125,6 +125,7 @@ body {
 .cv-button {
   display: inline-block;
   font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+  font-weight: bolder;
   background-color: aqua;
   color: black;
   padding: 10px 20px;

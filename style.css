@@ -969,6 +969,10 @@ hr {
   border: greenyellow solid 1px;
 }
 
+.projectLinks {
+  justify-content: flex-end;
+}
+
 @media (min-width: 769px) {
   .Projects {
     color: white;
@@ -1046,6 +1050,7 @@ hr {
 .refLinks{
   display: block;
   margin-top: 2rem;
+  text-align: right;
 }
 
 @media (max-width: 768px) {
@@ -1171,18 +1176,69 @@ hr {
 @media (min-width: 481px) and (max-width: 768px){
 
   .AboutMe p {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
 
   .card h3 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
 
   .card h6 {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
   }
 
   .card p {
-    font-size: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .caption-card{
+    font-size: larger;
+  }
+
+  .footerTagline{
+    font-size: large;
+  }
+
+  .aboutHighlights{
+    font-size: 1.7rem;
+  }
+
+  .qualContent{
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 769px){
+
+  .AboutMe p {
+    font-size: 1.7rem;
+  }
+
+  .card h3 {
+    font-size: 1.6rem;
+  }
+
+  .card h6 {
+    font-size: 1.7rem;
+  }
+
+  .card p {
+    font-size: 1.7rem;
+  }
+
+  .caption-card{
+    font-size: xx-large;
+  }
+
+  .footerTagline{
+    font-size: large;
+  }
+
+  .aboutHighlights{
+    font-size: 1.6rem;
+  }
+
+  .qualContent{
+    font-size: 1.5rem;
   }
 }

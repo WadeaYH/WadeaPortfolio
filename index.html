@@ -10,13 +10,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 
 <body>
 
 
-    <nav class="navbar navbar-expand-md navbar-dark" id="mainNav">
-        <div class="container-fluid">
+        <nav class="navbar navbar-expand-xl navbar-dark" id="mainNav">
+            <div class="container-fluid">
             <a class="navbar-brand logo logoHome" href="#">~/wadea<span class="terminalChar">|</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,8 +31,8 @@
                     <li class="nav-item"><a class="nav-link" href="#qualifications">Qualifications</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#project">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#references">References</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#footerlogo">Contact</a></li>
+                    <li class="nav-item" id="references"><a class="nav-link" href="#references">References</a></li>
+                    <li class="nav-item" id="contact"><a class="nav-link" href="#footerlogo">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -49,14 +50,22 @@
             <a class="cv-button"
                 href="https://drive.google.com/file/d/1ACG8vWopGX1gz84JkbpWvguCFm-SchWD/view?usp=sharing"
                 target="_blank" rel="noopener">View CV</a>
-            <span class="githubHero" id="herogithub"><a href="https://github.com/WadeaYH"
-                    target="_blank">[ GitHub ]</a></span>
-            <span class="githubHero" id="herogithub"><a
-                    href="https://www.linkedin.com/in/wadea-yh-2188b6278/?skipRedirect=true" target="_blank">[ LinkedIn
-                    ]</a></span>
+            <a class="iconLink" href="https://github.com/WadeaYH" target="_blank" rel="noopener">
+                <i class="bi bi-github"></i>
+                <span class="iconTooltip">GitHub</span>
+            </a>
+            <a class="iconLink" href="https://www.linkedin.com/in/wadea-yh-2188b6278/?skipRedirect=true" target="_blank" rel="noopener">
+                <i class="bi bi-linkedin"></i>
+                <span class="iconTooltip">LinkedIn</span>
+            </a>
             <div class="hero-icon">
                 <div class="glow-blur"></div>
                 <div class="icon-text">&lt;/&gt;</div>
+
+                <span class="techTag techTag--java">.NET</span>
+                <span class="techTag techTag--spring">Spring</span>
+                <span class="techTag techTag--sql">SQL</span>
+                <span class="techTag techTag--react">Angular</span>
             </div>
         </div>
     </section>
@@ -95,7 +104,7 @@
         </div>
 
         <div class="aboutStats">
-            <div class="glow-blur"></div>
+            <div class="glow-blur" id="aboutglow"></div>
             <div class="statItem">
                 <div class="statNumber statNumber--cyan">4+</div>
                 <div class="statLabel" style="color: white;">Years Coding</div>
@@ -168,7 +177,7 @@
             </div>
 
 
-
+            <!-- 
             <div class="card" id="orange">
                 <p class="cardNumber">01</p>
                 <h3>Full Stack Developer Trainer</h3>
@@ -178,7 +187,7 @@
                 <p class="card-description">Developing end-to-end web applications at Orange Jordan using C#, .NET, and
                     Angular, while gaining hands-on experience in full-stack development and professional software
                     practices.</p>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -196,10 +205,23 @@
 
         <div class="QualificationContainer">
 
+            <div class="qualEntry" id="qual-orange">
+                <div class="qualMarker">
+                    <span class="qualDot"></span>
+                    <span class="qualYear">2026 – 2027</span>
+                </div>
+                <div class="qualContent">
+                    <h3>Orange JO</h3>
+                    <h4 class="qualOrg">Orange JO</h4>
+                    <p>Full stack web development training in Orange Jo coding academy</p>
+                </div>
+            </div>
+
+
             <div class="qualEntry" id="yarmouk">
                 <div class="qualMarker">
                     <span class="qualDot"></span>
-                    <span class="qualYear">2018 – 2022</span>
+                    <span class="qualYear">2022 – 2026</span>
                 </div>
                 <div class="qualContent">
                     <h3>B.Sc. in Computer Information System</h3>
@@ -220,17 +242,6 @@
                 </div>
             </div>
 
-            <div class="qualEntry" id="qual-orange">
-                <div class="qualMarker">
-                    <span class="qualDot"></span>
-                    <span class="qualYear">2026 – 2027</span>
-                </div>
-                <div class="qualContent">
-                    <h3>Orange JO</h3>
-                    <h4 class="qualOrg">Orange JO</h4>
-                    <p>Full stack web development training in Orange Jo coding academy</p>
-                </div>
-            </div>
 
             <hr>
         </div>
@@ -248,7 +259,8 @@
 
         <div class="SkillsContainer">
 
-            <div class="skillsGrid">
+            <h5 class="caption-card">Technical Skills</h5>
+            <div class="skillsGrid" id="technical-skills">
                 <div class="skillCard skillCard--cyan">
                     <h4><span class="skillDot"></span> LANGUAGES</h4>
                     <div class="pills">
@@ -296,15 +308,20 @@
                         <span class="pill">Angular</span>
                     </div>
                 </div>
+                </div>
 
-                <div class="skillCard skillCard--deepPink">
-                    <h4><span class="skillDot"></span> SOFT</h4>
-                    <div class="pills">
+                <h5 class="caption-card">Soft Skills</h5>
+                <div class="skillsGrid" id="soft-skills">
+
+                    <div class="skillCard skillCard--deepPink">
+                        <h4><span class="skillDot"></span> SOFT</h4>
+                        <div class="pills">
                         <span class="pill">Problem Solving</span>
                         <span class="pill">Presentations</span>
                         <span class="pill">English</span>
                         <span class="pill">Team Work</span>
                     </div>
+
                 </div>
                 <!-- repeat for Frontend, Backend, Tools -->
 
@@ -381,41 +398,38 @@
 
         <div class="referencesGrid" id="anfal">
             <div class="refCard">
-                <p class="refQuote">"Wadea picked up C#, .NET, and Angular fast, and consistently shipped clean,
-                    well-tested code during his internship."</p>
                 <span class="refName">Anfal Dherat</span>
                 <span class="refRole">Full Stack Web Development Trainee at Coding academy by Orange</span>
                 <span class="email" style="font-weight: bolder; font-size: larger;">Email: <span
                         style="color: orange; font-weight: bold;">gt.anfal.daharat@orange.com</span></span>
                 <div class="refLinks">
-                <span class="githubCard"><a href="https://www.linkedin.com/in/anfal-dherat/" target="_blank">[ LinkedIn
-                        ]</a></span>
+                    <span class="githubCard"><a href="https://www.linkedin.com/in/anfal-dherat/" target="_blank">[
+                            LinkedIn
+                            ]</a></span>
                 </div>
             </div>
 
             <div class="refCard" id="batool" style="border-left: deeppink solid 4px;">
-                <p class="refQuote">"Wadea picked up C#, .NET, and Angular fast, and consistently shipped clean,
-                    well-tested code during his internship."</p>
                 <span class="refName">Batool Al-Dalki</span>
                 <span class="refRole">Full Stack Web Development Trainee at Coding academy by Orange</span>
                 <span class="email" style="font-weight: bolder; font-size: larger;">Email: <span
                         style="color: orange; font-weight: bold;">gt.batool.aldalki@orange.com</span></span>
                 <div class="refLinks">
-                <span class="githubCard"><a href="https://www.linkedin.com/in/batool-walid-b33894228/" target="_blank">[ LinkedIn
-                        ]</a></span>
+                    <span class="githubCard"><a href="https://www.linkedin.com/in/batool-walid-b33894228/"
+                            target="_blank">[ LinkedIn
+                            ]</a></span>
                 </div>
             </div>
 
             <div class="refCard" id="mohammad" style="border-left: orange solid 4px;">
-                <p class="refQuote">"Wadea picked up C#, .NET, and Angular fast, and consistently shipped clean,
-                    well-tested code during his internship."</p>
                 <span class="refName">Mohammed Frehat</span>
                 <span class="refRole">Full Stack Web Development Trainee at Coding academy by Orange</span>
                 <span class="email" style="font-weight: bolder; font-size: larger;">Email: <span
                         style="color: orange; font-weight: bold;">mfre7at@yahoo.com</span></span>
                 <div class="refLinks">
-                <span class="githubCard"><a href="https://www.linkedin.com/in/mohammed-frehat-9222402b/" target="_blank">[ LinkedIn
-                        ]</a></span>
+                    <span class="githubCard"><a href="https://www.linkedin.com/in/mohammed-frehat-9222402b/"
+                            target="_blank">[ LinkedIn
+                            ]</a></span>
                 </div>
             </div>
 
